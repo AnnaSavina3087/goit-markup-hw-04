@@ -237,12 +237,6 @@ section {
   padding-bottom: 24px;
 }
 
-/* .feature-icon { */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .feature-text {
   font-weight: 400;
   font-size: 16px;
@@ -318,6 +312,10 @@ section {
   border-radius: 50%;
   background-color: #4d5ae5;
 }
+.socials-icons:hover,
+.socials-icons:focus {
+  background-color: #404bbf;
+}
 .socials-icons-img {
   fill: #ffffff;
 }
@@ -331,6 +329,7 @@ section {
 }
 .portfolio-element {
   width: calc((100% - 48px) / 3);
+  cursor: pointer;
 }
 
 .portfolio-box {
@@ -339,8 +338,42 @@ section {
   border-right: 1px solid #e7e9fc;
   padding: 32px 16px;
 }
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  padding-top: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 500ms ease;
+}
 
+.portfolio-element:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+}
+.portfolio-element:hover .overlay-text {
+  transform: translateY(0);
+}
 /* Footer */
+.footer-container {
+  display: flex;
+  gap: 120px;
+}
+
 .page-footer {
   background-color: #2e2f42;
 }
@@ -358,10 +391,31 @@ section {
   display: inline-block;
   margin-bottom: 16px;
 }
-/* #region */
-
-.contacts {
-  counter-reset: ;
+.socials-footer {
+  width: 208px;
 }
-
-/* #andregion */
+.footer-social-icons {
+  display: flex;
+  gap: 16px;
+}
+.socials-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  padding-bottom: 16px;
+}
+.social-footer-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+.social-footer-item:hover,
+.social-footer-item:focus {
+  background-color: #31d0aa;
+}
